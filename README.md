@@ -1,2 +1,2 @@
 # ParkingLotApp
-Application for showing parking lot status 
+Can be found from: online.efecto.fi/ParkingLotApp
