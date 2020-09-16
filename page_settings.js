@@ -49,9 +49,10 @@ $(document).ready(function() {
             }
         });
     };
-    //redirect page to https:// if it's not already
+    //redirect page to https:// if it's not already 
+    /*REMOVED (switched index.html to .php and placed the code there.)
     $.get("Serverside/redirect_https.php", function(response) {
         //console.log(response);
-    });
+    });*/
     checkConnection();
 });
