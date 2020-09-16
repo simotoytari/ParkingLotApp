@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ParkingLotApp</title>
+
+    <script src="JS\node_modules\jquery\dist\jquery.min.js"></script>
+    <script src="JS\page_settings.js"></script>
+    <link rel="stylesheet" type="text/css" href="Css\node_modules\bootstrap\dist\css\bootstrap.min.css" />
+
+</head>
+
+<body>
+    <div class="col-12 text-center mt-3 mb-3">
+        <h1>Parking Lot App</h1>
+    </div>
+    <div class="col-12">
+        <table class="table table-striped">
+            <tr>
+                <th>Parking Lot Name</th>
+                <th>Parking Lot Status</th>
+                <th>Total amount of parking spaces</th>
+                <th>Occupied parking spaces</th>
+            </tr>
+
+        </table>
+    </div>
+	<?php
+        if($_SERVER['HTTPS'] != "on"){
+            $url = "https://".
+            $_SERVER['SERVER_NAME'].
+            $_SERVER['REQUEST_URI'];
+            header("Location:$url");
+            exit;
+
+        }
+    ?>
+</body>
+
+</html>
