@@ -12,9 +12,10 @@
         
 
         #Pushing values to database table
+        /*
         $sql = "UPDATE ParkingLot SET ploccupied=33 WHERE plname='P2'";
         $db->exec($sql);
-        
+        */
 
         $sql = "SELECT plname, plstatus, pltotal, ploccupied FROM ParkingLot";
         $stmt = $db->query($sql);
