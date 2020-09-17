@@ -23,10 +23,10 @@
         while ($row = $stmt->fetch()){
             #check if total and occupied parkingspaces are the same. If they are set status to false and update database
             if(array_values($row)[2] == array_values($row)[3]){
-               $row[plstatus] = 0;
+               $row[plstatus] = 0;//ParkingLot Status 0 = Closed, 1 = Open
                array_push($response, $row);
                $plname_ir = strval(array_values($row)[0]);
-               $sql2 = "UPDATE ParkingLot SET plstatus=0 WHERE plname='" . $plname_ir . "'";
+               $sql2 = "UPDATE ParkingLot SET plstatus=0 WHERE plname='" . $plname_ir . "'";//Update status to database
                $db->exec($sql2);
             }else{
                 $row[plstatus] = 1;
